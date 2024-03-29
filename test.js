@@ -9,7 +9,7 @@ let highTime = JSON.parse(localStorage.getItem("time"));
 
 var storedTime = localStorage.getItem("highTime");
 var highTimeObj = JSON.parse(storedTime);
-var highTimeString = highTimeObj.time==null?"00:00:00":highTimeObj.time;
+var highTimeString = (highTimeObj && highTimeObj.time) ? highTimeObj.time : "00:00:00";
 document.getElementById("hm").innerText = highTimeString;
 // highTime =  highTime==null?"00:00:00":highTime.time;
 
