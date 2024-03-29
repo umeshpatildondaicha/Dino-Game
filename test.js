@@ -144,5 +144,16 @@ if(window.innerHeight > window.innerWidth){
           start_time()
       }
   })
+
+  // Add event listener for click on the dino
+dino.addEventListener("click", function() {
+  jump();
+});
+
+// Add event listener for click to start the game
+document.addEventListener("click", function() {
+  document.body.classList.remove("preload");
+  start_time();
+});
   
 };
